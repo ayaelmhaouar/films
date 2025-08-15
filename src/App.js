@@ -4,7 +4,7 @@ import axios from "axios";
 import Home from "./pages/Movie";
 import MovieDetail from "./pages/MovieDetail";
 import Login from "./pages/Login";
-
+import Apropo from "./pages/Apropo"
 
 
 function App() {
@@ -72,6 +72,9 @@ function App() {
           <Link to="/" style={{ color: "#fff", textDecoration: "none",  textAlign: "right" ,  fontSize: "24px",marginRight: "30px"}}>
             Home
           </Link>
+          <Link to="/Apropo" style={{ color: "#fff", textDecoration: "none",  textAlign: "right" ,  fontSize: "24px",marginRight: "30px"}}>
+          À propos
+          </Link>
           {!isLoggedIn && (
             <Link to="/login" style={{ color: "#fff", textDecoration: "none" ,  textAlign: "right",  fontSize: "24px"}}>
               Login
@@ -110,6 +113,7 @@ function App() {
             />
           }
         />
+         <Route path="/Apropo" element={<Apropo />} />
         <Route path="/movie/:id" element={<MovieDetail />} />
         <Route
           path="/login"
